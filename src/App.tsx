@@ -27,7 +27,7 @@ function App() {
         </video>
 
         <audio ref={audioRef} src={ endMenu ? bgMusicCh2 : bgMusicCh1} autoPlay loop />
-        <DeltaruneMenu/>
+        <DeltaruneMenu ch2menu={endMenu}/>
 
         <div className="slider-container">
           <label className="switch">

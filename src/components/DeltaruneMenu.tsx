@@ -3,8 +3,11 @@ import heartImage from "../assets/images/soul.png"; // Undertale/Deltarune soul 
 import selectItemSound from "../assets/soundeffects/snd_squeak.wav"; // Select item sound effect
 import selectedSound from "../assets/soundeffects/snd_select_ch1.wav"; // Selected sound effect
 
+interface DeltaruneMenuProps {
+  ch2menu: boolean;
+}
 
-const DeltaruneMenu = () => {
+const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
   const [selectedSlot, setSelectedSlot] = useState(0);
   const selectedSlotRef = useRef(selectedSlot);
   const slots = ["WING GASTER", "[EMPTY]", "[EMPTY]"];
