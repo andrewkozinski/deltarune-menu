@@ -65,7 +65,7 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
 
   return (
     <div className={classNames(
-      "flex flex-col items-center justify-center h-screen font-DeterminationMono",
+      "flex flex-col items-center justify-center h-screen font-DeterminationMono color-transition",
       {
         "text-white": ch2menu,
         "text-[#1be816]": !ch2menu,
@@ -86,10 +86,11 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
           </div>
           <div className="flex flex-col w-full pl-8">
             <div className="flex justify-between">
-              <span>{slot}</span>
-              <span>{slotTimes[index]}</span>
+              <span className="color-transition">{slot}</span>
+              <span className="color-transition">{slotTimes[index]}</span>
             </div>
             <div className={classNames(
+              "color-transition",
               {
                 "text-[#1be816]": !ch2menu,
                 "text-[#FFFFFF]": ch2menu,
@@ -99,7 +100,7 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
         </div>
       ))}
       <div className={classNames(
-        "mt-4 flex gap-22",
+        "mt-4 flex gap-22 color-transition",
         {
           "text-white": ch2menu,
           "text-[#1be816]": !ch2menu,

@@ -118,6 +118,10 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+.color-transition {
+  animation: color 1s ease-in-out;
+}
+
 /*#root {
   max-width: 1280px;
   margin: 0 auto;
