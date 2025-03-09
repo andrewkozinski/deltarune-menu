@@ -19,16 +19,18 @@ function App() {
 
   // Add event listener for keydown to start audio
   useEffect(() => {
-    const handleKeyDown = () => {
+    const handleInteraction = () => {
       if (audioRef.current) {
         audioRef.current.play();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleInteraction);
+    window.addEventListener('mousedown', handleInteraction);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keydown', handleInteraction);
+      window.removeEventListener('mousedown', handleInteraction);
     };
   }, []);
 
