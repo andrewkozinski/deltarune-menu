@@ -15,8 +15,6 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
   const slotDetails = ["THE CORE", "___________", "___________"];
   const slotTimes = ["666:666", "--:--", "--:--"];
   const links = ["https://www.youtube.com/watch?v=B5nmMDOHsjc", "", ""];
-  //const mainColor = ch2menu ? "#FFFFFF" : "#1be816";
-
 
   useEffect(() => {
     selectedSlotRef.current = selectedSlot;
@@ -86,14 +84,15 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
           </div>
           <div className="flex flex-col w-full pl-8">
             <div className="flex justify-between">
-              <span className="color-transition">{slot}</span>
-              <span className="color-transition">{slotTimes[index]}</span>
+              <span className={classNames("color-transition", { "text-shadow": ch2menu })}>{slot}</span>
+              <span className={classNames("color-transition", { "text-shadow": ch2menu })}>{slotTimes[index]}</span>
             </div>
             <div className={classNames(
               "color-transition",
               {
                 "text-[#1be816]": !ch2menu,
                 "text-[#FFFFFF]": ch2menu,
+                "text-shadow": ch2menu,
               }
             )}>{slotDetails[index]}</div>
           </div>
@@ -104,6 +103,7 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
         {
           "text-white": ch2menu,
           "text-[#1be816]": !ch2menu,
+          "text-shadow": ch2menu,
         }
       )}>
         <span>COPY</span>

@@ -122,6 +122,16 @@ input:checked + .slider:before {
   animation: color 1s ease-in-out;
 }
 
+.text-shadow {
+  text-shadow: 
+    2px 2px 0 #000,  /* Primary shadow: bottom-right */
+    -1px -1px 0 #000,  /* Top-left shadow for outline */
+    1px -1px 0 #000,  /* Top-right shadow for outline */
+    -1px  1px 0 #000,  /* Bottom-left shadow for outline */
+    2px  0 0 #000,   /* Right shadow for thickness */
+    0  2px 0 #000;   /* Bottom shadow for thickness */
+}
+
 /*#root {
   max-width: 1280px;
   margin: 0 auto;
