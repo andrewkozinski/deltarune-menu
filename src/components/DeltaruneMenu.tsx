@@ -15,7 +15,7 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
   const slotDetails = ["THE CORE", "___________", "___________"];
   const slotTimes = ["666:666", "--:--", "--:--"];
   const links = ["https://www.youtube.com/watch?v=B5nmMDOHsjc", "", ""];
-  const mainColor = ch2menu ? "#FFFFFF" : "#1be816";
+  //const mainColor = ch2menu ? "#FFFFFF" : "#1be816";
 
 
   useEffect(() => {
@@ -64,12 +64,18 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
   }, []);
 
   return (
-    <div className={`flex flex-col items-center justify-center h-screen text-[${mainColor}]-400 font-DeterminationMono`}>
+    <div className={classNames(
+      "flex flex-col items-center justify-center h-screen font-DeterminationMono",
+      {
+        "text-white": ch2menu,
+        "text-[#1be816]": !ch2menu,
+      }
+    )}>
       {slots.map((slot, index) => (
         <div key={index} className={classNames(
           "border p-4 w-125 mb-2 flex items-center relative",
           {
-            "bg-black bg-opacity-50": ch2menu,
+            "bg-black/50": ch2menu,
             "bg-black": !ch2menu,
             "border-[#FFFFFF]": ch2menu,
             "border-[#1be816]": !ch2menu,
@@ -83,11 +89,22 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
               <span>{slot}</span>
               <span>{slotTimes[index]}</span>
             </div>
-            <div className="text-[#1be816]-400">{slotDetails[index]}</div>
+            <div className={classNames(
+              {
+                "text-[#1be816]": !ch2menu,
+                "text-[#FFFFFF]": ch2menu,
+              }
+            )}>{slotDetails[index]}</div>
           </div>
         </div>
       ))}
-      <div className={`mt-4 flex gap-22 text-[${mainColor}]-400`}>
+      <div className={classNames(
+        "mt-4 flex gap-22",
+        {
+          "text-white": ch2menu,
+          "text-[#1be816]": !ch2menu,
+        }
+      )}>
         <span>COPY</span>
         <span>ERASE</span>
         <span>JAPANESE</span>
