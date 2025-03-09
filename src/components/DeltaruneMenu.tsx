@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import heartImage from "../assets/images/soul.png"; // Undertale/Deltarune soul image
 import selectItemSound from "../assets/soundeffects/snd_squeak.wav"; // Select item sound effect
 import selectedSound from "../assets/soundeffects/snd_select_ch1.wav"; // Selected sound effect
+import classNames from "classnames";
 
 interface DeltaruneMenuProps {
   ch2menu: boolean;
@@ -14,6 +15,8 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
   const slotDetails = ["THE CORE", "___________", "___________"];
   const slotTimes = ["666:666", "--:--", "--:--"];
   const links = ["https://www.youtube.com/watch?v=B5nmMDOHsjc", "", ""];
+  const mainColor = ch2menu ? "#FFFFFF" : "#1be816";
+
 
   useEffect(() => {
     selectedSlotRef.current = selectedSlot;
@@ -61,9 +64,17 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-[#1be816]-400 font-DeterminationMono">
+    <div className={`flex flex-col items-center justify-center h-screen text-[${mainColor}]-400 font-DeterminationMono`}>
       {slots.map((slot, index) => (
-        <div key={index} className="border border-[#1be816]-400 p-4 w-125 mb-2 flex items-center relative bg-black">
+        <div key={index} className={classNames(
+          "border p-4 w-125 mb-2 flex items-center relative",
+          {
+            "bg-black bg-opacity-50": ch2menu,
+            "bg-black": !ch2menu,
+            "border-[#FFFFFF]": ch2menu,
+            "border-[#1be816]": !ch2menu,
+          }
+        )}>
           <div className="absolute left-1.6 top-1/2 transform -translate-y-1/2 flex items-center">
             {selectedSlot === index && <img src={heartImage} alt="Heart" className="w-5 h-5 mr-2" />} 
           </div>
@@ -76,7 +87,7 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
           </div>
         </div>
       ))}
-      <div className="mt-4 flex gap-22 text-[#1be816]-400">
+      <div className={`mt-4 flex gap-22 text-[${mainColor}]-400`}>
         <span>COPY</span>
         <span>ERASE</span>
         <span>JAPANESE</span>
