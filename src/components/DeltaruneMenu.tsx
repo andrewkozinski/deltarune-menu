@@ -71,8 +71,10 @@ const DeltaruneMenu : React.FC<DeltaruneMenuProps> = ({ ch2menu }) =>  {
     )}>
       {slots.map((slot, index) => (
         <div key={index} className={classNames(
-          "border p-4 w-125 mb-2 flex items-center relative",
+          "p-4 w-125 mb-2 flex items-center relative transition-border",
           {
+            "border-5": ch2menu,
+            "border": !ch2menu,
             "bg-black/50": ch2menu,
             "bg-black": !ch2menu,
             "border-[#FFFFFF]": ch2menu,

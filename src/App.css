@@ -132,6 +132,10 @@ input:checked + .slider:before {
     0  2px 0 #000;   /* Bottom shadow for thickness */
 }
 
+.transition-border {
+  transition: border-color .02s ease-in-out;
+}
+
 /*#root {
   max-width: 1280px;
   margin: 0 auto;
