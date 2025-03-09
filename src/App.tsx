@@ -17,6 +17,21 @@ function App() {
     }
   }, []);
 
+  // Add event listener for keydown to start audio
+  useEffect(() => {
+    const handleKeyDown = () => {
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
     <>
       <div className={`main-body ${endMenu ? "ch2" : ""}`}>
@@ -26,7 +41,7 @@ function App() {
           Your browser does not support the video tag.
         </video>
 
-        <audio ref={audioRef} src={ endMenu ? bgMusicCh2 : bgMusicCh1} autoPlay loop />
+        <audio id="music" ref={audioRef} src={ endMenu ? bgMusicCh2 : bgMusicCh1} autoPlay loop />
         <DeltaruneMenu ch2menu={endMenu}/>
 
         <div className="slider-container">
