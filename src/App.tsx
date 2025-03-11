@@ -4,6 +4,9 @@ import bgMusicCh1 from './assets/soundeffects/mainmenu.mp3'
 import bgMusicCh2 from './assets/soundeffects/Before the Story.mp3'
 import bgVideo from './assets/images/fountainmenu.mp4'
 import { useEffect, useRef, useState } from 'react'
+import {setTitle} from './other funcs/pagefuncs.ts'
+import {setFavicon} from './other funcs/pagefuncs.ts'
+import icon from './assets/images/soul.png'
 
 function App() {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -33,6 +36,10 @@ function App() {
       window.removeEventListener('mousedown', handleInteraction);
     };
   }, []);
+
+  // Set the title and favicon
+  setTitle("Deltarune Main Menu");
+  setFavicon(icon);
 
   return (
     <>
