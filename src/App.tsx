@@ -53,6 +53,7 @@ function App() {
         <audio id="music" ref={audioRef} src={ endMenu ? bgMusicCh2 : bgMusicCh1} autoPlay loop />
         <DeltaruneMenu ch2menu={endMenu}/>
 
+        {/* Toggle switch between chapter 1 and chapter complete main menus. Make this ruins switch eventually?*/}
         <div className="slider-container">
           <label className="switch">
             <input type="checkbox" checked={endMenu} onChange={() => setEndMenu(!endMenu)} />
