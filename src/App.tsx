@@ -45,6 +45,7 @@ function App() {
     <>
       <div className={`main-body ${endMenu ? "ch2" : ""}`}>
         
+        {/* Chapter complete fountain background. Does not display when Chapter 1 menu is enabled. */}
         <video preload="auto" autoPlay muted loop id={`video-bg`} className={`${endMenu ? "" : "vanish"}`}>
           <source src={bgVideo} />
           Your browser does not support the video tag.
