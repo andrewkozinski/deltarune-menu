@@ -21,6 +21,16 @@ Changing between menu styles
 - Audio: Incorporates music and sound effects directly from Deltarune.
 - Visual Fidelity: Captures the aesthetic and layout of the original game menus, as showcased in the provided screenshots.
 
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- React
+- Tailwind CSS
+
 ## License
 
     Copyright [2025] [Andrew Kozinski]
