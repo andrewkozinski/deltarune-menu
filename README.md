@@ -4,9 +4,14 @@ This is a site I made as a fun side project that aims to recreate the Deltarune 
 
 # Program Screenshots
 Chapter 1 Menu
+
 ![Chapter 1 Menu Screenshot (toggle button in bottom right corner)](https://i.imgur.com/4ccay8W.png)
 Completed Chapter Menu
+
 ![Completed Chapter Menu Screenshot](https://i.imgur.com/bzR6EnW.png)
+
+Changing between menu styles
+![Changing from ch1 menu to chapter completed menu](https://github.com/andrewkozinski/andrewkozinski.github.io/blob/main/src/assets/deltarunemainmenuprojectch1tochcomplete.gif?raw=true)
 
 ## Features
 - Accurate Recreation: Faithfully replicates the Deltarune main menu from Chapter 1 and its updated appearance after completing either Chapter 1 or 2.
