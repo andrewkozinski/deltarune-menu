@@ -3,7 +3,9 @@
 This is a site I made as a fun side project that aims to recreate the Deltarune main menu from both Chapter 1 and what the main menu looks like when you complete either Chapter 1 or 2. The project includes a toggle switch in the bottom right corner that allows a user to change from chapter 1's main menu to the appearance the main menu takes upon a chapter's completion. This project features music and sound effects from Deltarune and was made using React, TypeScript, and Tailwind CSS. 
 
 # Program Screenshots
+Chapter 1 Menu
 ![Chapter 1 Menu Screenshot (toggle button in bottom right corner)](https://i.imgur.com/4ccay8W.png)
+Completed Chapter Menu
 ![Completed Chapter Menu Screenshot](https://i.imgur.com/bzR6EnW.png)
 
 ## Features
