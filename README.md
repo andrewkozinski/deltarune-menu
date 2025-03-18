@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+# Deltarune Main Menu Recreation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a site I made as a fun side project that aims to recreate the Deltarune main menu from both Chapter 1 and what the main menu looks like when you complete either Chapter 1 or 2. The project includes a toggle switch in the bottom right corner that allows a user to change from chapter 1's main menu to the appearance the main menu takes upon a chapter's completion. This project features music and sound effects from Deltarune and was made using React, TypeScript, and Tailwind CSS. 
 
-Currently, two official plugins are available:
+# Program Screenshots
+![Chapter 1 Menu Screenshot (toggle button in bottom right corner)](https://i.imgur.com/U6MSqJx.png)
+![Completed Chapter Menu Screenshot](https://i.imgur.com/bzR6EnW.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Accurate Recreation: Faithfully replicates the Deltarune main menu from Chapter 1 and its updated appearance after completing either Chapter 1 or 2.
+- Toggle Switch: Includes a toggle button in the bottom right corner, allowing users to seamlessly switch between the Chapter 1 main menu and the completed chapter menu.
+- Audio: Incorporates music and sound effects directly from Deltarune.
+- Visual Fidelity: Captures the aesthetic and layout of the original game menus, as showcased in the provided screenshots.
 
-## Expanding the ESLint configuration
+## License
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    Copyright [2025] [Andrew Kozinski]
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+        http://www.apache.org/licenses/LICENSE-2.0
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
